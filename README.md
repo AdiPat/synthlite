@@ -9,25 +9,29 @@
 
 ## Introduction 💡
 
-**synthlite ⚡️** is a **Groq-powered** synthetic data generation CLI tool and library written in TypeScript. It’s designed to help you quickly produce high-quality synthetic datasets—perfect for development, testing, or even for product features and experiments. 🧢
+**synthlite ⚡️** is a **synthetic data generation CLI tool and library** written in TypeScript. It’s designed to help you quickly produce high-quality synthetic datasets—perfect for development, testing, or even for product features and experiments. 🥢
 
 <p align="center" width="100%">
-    <img width="100%" src="https://cdn.pixabay.com/photo/2023/04/03/13/26/wallpaper-7896859_1280.jpg"> 
+    <img width="100%" src="https://cdn.pixabay.com/photo/2023/04/03/13/26/wallpaper-7896859_1280.jpg">
 </p>
 
 > 💬 **Why?** Because synthetic data opens new frontiers for experimentation, privacy-friendly testing, and robust model training—helping developers and researchers alike! 😎
 
-Under the hood, synthlite demonstrates the **speed and power** of Groq’s LPU architecture, while also showcasing how seamlessly it can integrate with Llama 3.x for data generation. ⚙
+Under the hood, synthlite demonstrates the **speed and power** of various large language models (LLMs), including those from OpenAI, Anthropic, Meta, and Groq, showcasing how seamlessly they can integrate for data generation. ⚙
 
 ## Partnerships & Future Collaboration 🤝
 
-> 🚦 synthlite is not affiliated with any of the mentioned organizations and is an independent "hacker" project. However, in this note, I wish to propose future partnerships or collaborations with either or all of Groq, Meta and/or Vercel.
+> 🚦 synthlite is not affiliated with any of the mentioned organizations and is an independent "hacker" project. However, in this note, I wish to propose future partnerships or collaborations with any or all of OpenAI, Anthropic, Meta, and Groq.
 
-Here at **synthlite**, we're always on the lookout for meaningful collaborations to take synthetic data generation to the next level. While our current setup already demonstrates Groq’s LPU might and Llama 3.1’s generative prowess, we envision broader use cases and accelerated growth through strategic partnerships with:
+Here at **synthlite**, we're always on the lookout for meaningful collaborations to take synthetic data generation to the next level. While our current setup already demonstrates the capabilities of various LLMs, we envision broader use cases and accelerated growth through strategic partnerships with:
 
-- **Groq:** Further explore advanced hardware acceleration and develop cutting-edge benchmarks that highlight how synthlite + Groq can supercharge synthetic data pipelines.
-- **Meta:** Investigate how Llama 3.1 and potential future Llama variants can seamlessly integrate with synthlite for more nuanced data generation scenarios.
-- **Vercel:** Since synthlite’s engine uses the **Vercel AI SDK Core** under the hood, we’re excited to explore hosting possibilities, frictionless deployment strategies, and deeper integration with Vercel’s powerful infrastructure.
+- **OpenAI:** Explore how advanced AI models can be utilized effectively across diverse tasks, moving closer to Artificial General Intelligence (AGI) by leveraging existing technologies.
+
+- **Anthropic:** Investigate the potential of AI models in creating nuanced synthetic data, contributing to the development of safe and reliable AI systems.
+
+- **Meta:** Examine how Llama 3.x and future Llama variants can seamlessly integrate with synthlite for more sophisticated data generation scenarios.
+
+- **Groq:** Further explore advanced hardware acceleration and develop cutting-edge benchmarks that highlight how synthlite combined with Groq can enhance synthetic data pipelines.
 
 If you have any leads or are directly affiliated with these organizations (or similar), feel free to reach out! We believe that combining our open-source vision with innovative partners can push synthetic data tools even further—providing the community with faster, safer, and more adaptable ways to generate synthetic datasets. 🚀
 
@@ -35,7 +39,7 @@ If you have any leads or are directly affiliated with these organizations (or si
 
 ---
 
-## Table of Contents 📖
+## Table of Contents 📚
 
 - [Introduction](#introduction-)
 - [Core Features](#core-features-)
@@ -51,20 +55,28 @@ If you have any leads or are directly affiliated with these organizations (or si
 
 ## Core Features 🔧
 
-- **LPU-Optimized Generation:** Harness Groq’s LPU architecture for **lightning-fast** synthetic data generation.
+- **Optimized Generation:** Harness the power of various LLMs for **efficient** synthetic data generation.
+
 - **TypeScript Library & CLI:** Use synthlite as a standalone CLI or integrate directly into your projects.
+
 - **Schema-Based Datasets:** Initialize a dataset with your `jsonSchema` for structured, valid data every time.
+
 - **Flexible Output Formats:** Save generated data in **JSON** or **CSV**—or just work with it in-memory as a JavaScript object.
-- **Llama 3.1 Integration:** (Optional) Use the power of Llama 3.3 70B to enhance realism and variety in your synthetic data.
+
+- **LLM Integration:** (Optional) Use the power of models like Llama 3.x to enhance realism and variety in your synthetic data.
 
 ---
 
 ## Potential Problem Statements & Research Areas 🔎
 
 1. **Privacy & Compliance:** Generate synthetic datasets that mimic real-world data distributions without exposing sensitive information.
+
 2. **High-Volume Testing:** Rapidly create large datasets for load testing or performance benchmarking.
+
 3. **AI Model Training:** Explore how synthetic data can be used to train or fine-tune AI models while preserving privacy.
-4. **Groq Performance Research:** Investigate how Groq’s hardware acceleration can supercharge the synthetic data generation process.
+
+4. **Performance Research:** Investigate how hardware acceleration can supercharge the synthetic data generation process.
+
 5. **Multi-Modal Future:** Potential exploration of text, image, or even audio synthetic data using advanced AI models.
 
 Relevance: As the need for large, diverse, and privacy-friendly datasets grows, **synthlite** aims to deliver a swift, flexible solution that caters to the modern data-driven ecosystem.
@@ -76,7 +88,7 @@ Relevance: As the need for large, diverse, and privacy-friendly datasets grows, 
 1. **Create a Dataset**
 
    ```ts
-   const dataset = new Dataset(jsonSchema);
+   const dataset = new SynthliteDataset(jsonSchema);
    ```
 
    This sets up your data structure based on the JSON schema you provide.
@@ -90,12 +102,14 @@ Relevance: As the need for large, diverse, and privacy-friendly datasets grows, 
    Produces a `GeneratedDataset` object containing your synthetic samples.
 
 3. **Save the Output**
+
    ```ts
    generatedDataset.save("output.json", "json");
    ```
+
    Exports the generated data in JSON or CSV formats—whichever you prefer.
 
-All these steps leverage Groq’s speed and can optionally tap into Llama 3.3’s generative capabilities.
+All these steps leverage the efficiency of various LLMs and can optionally tap into models like Llama 3.x for enhanced generative capabilities.
 
 ---
 
@@ -104,8 +118,10 @@ All these steps leverage Groq’s speed and can optionally tap into Llama 3.3’
 ### Prerequisites
 
 - **Node.js** v16+
+
 - **TypeScript** 4.x
-- A valid Groq setup (if you plan to use Groq’s acceleration features)
+
+- Access to relevant AI models (if you plan to use LLM integration features)
 
 ### Installation
 
@@ -117,6 +133,7 @@ All these steps leverage Groq’s speed and can optionally tap into Llama 3.3’
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
@@ -130,9 +147,11 @@ All these steps leverage Groq’s speed and can optionally tap into Llama 3.3’
    ```
 
 2. **Use the CLI (example):**
+
    ```bash
    npm start -- --schema ./mySchema.json --count 1000 --output data.json
    ```
+
    This will generate 1,000 samples using `mySchema.json` and save them to `data.json`.
 
 ---
@@ -164,9 +183,11 @@ All these steps leverage Groq’s speed and can optionally tap into Llama 3.3’
      This generates 500 samples and prints them to stdout.
 
    - **Save to File**
+
      ```bash
      npm start -- --schema ./mySchema.json --count 1000 --output data.csv
      ```
+
      Exports 1,000 samples to a `data.csv` file.
 
 3. **Optional Llama 3.1 Hook**  
@@ -197,7 +218,7 @@ We welcome contributions! Feel free to open issues, fork the repo, and submit pu
 
 ---
 
-## License 📄
+## License 📜
 
 This project is licensed under the **AGPL v3**. See the [LICENSE](LICENSE) file for details.
 
