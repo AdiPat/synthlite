@@ -14,7 +14,8 @@
     "test:silent": "vitest --silent --testTimeout 30000",
     "test:coverage": "vitest --coverage --testTimeout 30000",
     "test:coverage:silent": "vitest --coverage --silent --testTimeout 30000",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "publish": "npm run build && npm publish --access public"
   },
   "files": [
     "dist",
