@@ -9,6 +9,7 @@ import { anthropic } from "@ai-sdk/anthropic";
 import { generateObject, LanguageModel } from "ai";
 import { EventEmitter } from "events";
 import { v4 as uuidv } from "uuid";
+import { Printer } from "./core";
 
 const chalkPink = chalk.hex("#FF1493");
 
@@ -36,6 +37,8 @@ interface CLIOptions {
 type OutputFormat = "json" | "csv";
 
 /** Classes & Methods */
+
+const printer = new Printer();
 
 class SynthliteEmitter extends EventEmitter {
   private static instance: SynthliteEmitter;
@@ -111,11 +114,6 @@ export class SynthliteDataset {
     this.emitter = SynthliteEmitter.getInstance();
   }
 
-  // debug only
-  printSchema() {
-    console.log(this.jsonSchema, this.schema);
-  }
-
   static async fromSchemaFile(schemaPath: string) {
     const schema = await fs.readFile(schemaPath, "utf-8");
     return new SynthliteDataset(JSON.parse(schema));
@@ -134,27 +132,17 @@ export class SynthliteDataset {
       data = data.filter((x) => Boolean(x));
       data = data.map((row) => ({ ...row, id: row?.id || uuidv() }));
 
-      console.log(
-        chalk.greenBright(
-          `→ Duplicate count table: ${JSON.stringify(
-            duplicateCountTable,
-            null,
-            2
-          )}`
-        )
+      printer.debug(
+        `Duplicate count table: ${JSON.stringify(duplicateCountTable, null, 2)}`
       );
 
       const batchStartTime = performance.now();
       dataLengthUpdates.push(data.length);
-      console.log(
-        chalk.greenBright(
-          `→ [batchCount: ${batchCount}] Generating batch of ${DEFAULT_BATCH_SIZE} synthetic data.`
-        )
+      printer.info(
+        `[batchCount: ${batchCount}] Generating batch of ${DEFAULT_BATCH_SIZE} synthetic data.`
       );
-      console.log(
-        chalk.greenBright(
-          `→ [batchCount: ${batchCount}] Total unique rows generated so far: ${data.length} / ${count}.`
-        )
+      printer.info(
+        `[batchCount: ${batchCount}] Total unique rows generated so far: ${data.length} / ${count}.`
       );
 
       let avoidDuplicatesPromptInput = "";
@@ -217,11 +205,7 @@ export class SynthliteDataset {
       })
         .then((res) => res.object.rows)
         .catch((err) => {
-          console.error(
-            chalk.redBright(
-              `[!] Error generating synthetic data: ${err.message}`
-            )
-          );
+          printer.error(`Error generating synthetic data: ${err.message}`);
           return [];
         });
 
@@ -244,10 +228,8 @@ export class SynthliteDataset {
         }
       });
 
-      console.log(
-        chalk.yellowBright(
-          `→ Found ${duplicates.length} duplicates and ${uniques.length} unique rows in the batch.`
-        )
+      printer.info(
+        `Found ${duplicates.length} duplicates and ${uniques.length} unique rows in the batch.`
       );
 
       data.push(...uniques);
@@ -255,10 +237,8 @@ export class SynthliteDataset {
       const mutatedDuplicates = await this.mutateDuplicates(duplicates, data);
 
       if (mutatedDuplicates.length > 0) {
-        console.log(
-          chalk.yellowBright(
-            `→ Found ${mutatedDuplicates.length} mutated duplicates in the batch.`
-          )
+        printer.info(
+          `Found ${mutatedDuplicates.length} mutated duplicates in the batch.`
         );
         data.push(...mutatedDuplicates);
       }
@@ -269,22 +249,19 @@ export class SynthliteDataset {
       this.emitter.emit("synthlite:write_data", data);
 
       const batchEndTime = performance.now();
-      console.log(
-        chalk.greenBright(
-          `→ [batchCount: ${batchCount}] Batch generated in ${
-            (batchEndTime - batchStartTime) / 1000
-          } seconds.`
-        )
+
+      printer.info(
+        `[batchCount: ${batchCount}] Batch generated in ${
+          (batchEndTime - batchStartTime) / 1000
+        } seconds.`
       );
 
       if (dataLengthUpdates.length > CONSECUTIVE_NOOP_THRESHOLD) {
         const lastThree = dataLengthUpdates.slice(-CONSECUTIVE_NOOP_THRESHOLD);
         const diff = lastThree[2] - lastThree[0];
         if (diff === 0) {
-          console.error(
-            chalk.redBright(
-              `[!] No new data points generated in last 3 batches. Exiting to avoid infinite loop.`
-            )
+          printer.error(
+            `No new data points generated in last 3 batches. Exiting to avoid infinite loop.`
           );
           break;
         }
@@ -301,10 +278,7 @@ export class SynthliteDataset {
     const mutatedDuplicates: any[] = [];
     for (const duplicate of duplicates) {
       let mutatedDuplicate = await this.mutateDuplicateByKeys(duplicate, data);
-      console.log(
-        chalkPink(`→ Mutated duplicate: ${JSON.stringify(mutatedDuplicate)}`)
-      );
-
+      printer.debug(`Mutated duplicate: ${JSON.stringify(mutatedDuplicate)}`);
       mutatedDuplicates.push(mutatedDuplicate);
     }
 
@@ -355,21 +329,17 @@ export class SynthliteDataset {
     })
       .then((res) => res.object)
       .catch((err) => {
-        console.error(
-          chalk.redBright(`[!] Error mutating duplicate: ${err.message}`)
-        );
+        printer.error(`Error mutating duplicate: ${err.message}`);
         return null;
       });
 
     if (mutatedDuplicate && this.hasDuplicate(mutatedDuplicate, data)) {
-      console.error(
-        chalk.redBright(
-          `[!] Mutated duplicate is still a duplicate: ${JSON.stringify(
-            mutatedDuplicate
-          )}`
-        )
+      printer.error(
+        `[!] Mutated duplicate is still a duplicate: ${JSON.stringify(
+          mutatedDuplicate
+        )}`
       );
-      console.log(chalk.yellowBright(`→ Skipping the duplicate for now.`));
+      printer.warn(`→ Skipping the duplicate for now.`);
       return null;
     }
 
@@ -397,17 +367,23 @@ export class SynthliteDataset {
 
 function assertAIConfig() {
   if (process.env.ANTHROPIC_API_KEY) {
+    printer.debug("ANTHROPIC_API_KEY found in environment.");
     return;
+  } else {
+    printer.debug(
+      "No ANTHROPIC_API_KEY found in environment. Falling back to GROQ API."
+    );
   }
 
   if (process.env.GROQ_API_KEY) {
+    printer.debug("GROQ_API_KEY found in environment.");
     return;
+  } else {
+    printer.debug("No GROQ_API_KEY found in environment.");
   }
 
-  console.error(
-    chalk.redBright(
-      "[!] Please add either GROQ_API_KEY or ANTHROPIC_API_KEY to your environment file."
-    )
+  printer.error(
+    "Please add either GROQ_API_KEY or ANTHROPIC_API_KEY to your environment file."
   );
   process.exit(1);
 }
@@ -435,10 +411,8 @@ function getCLIOptions(): CLIOptions {
   const schema = options.schema;
 
   if (!schema) {
-    console.error(
-      chalk.redBright(
-        "[!] schema file is required! Use -sc option to specify the schema file."
-      )
+    printer.error(
+      "schema file is required! Use -sc option to specify the schema file."
     );
     process.exit(1);
   }
@@ -446,10 +420,8 @@ function getCLIOptions(): CLIOptions {
   const output = options.output;
 
   if (!output) {
-    console.error(
-      chalk.redBright(
-        "[*] output file is required! Use -o option to specify the output file."
-      )
+    printer.error(
+      "output file is required! Use -o option to specify the output file."
     );
     process.exit(1);
   }
@@ -457,10 +429,8 @@ function getCLIOptions(): CLIOptions {
   let rows = options.rows;
 
   if (!rows) {
-    console.warn(
-      chalk.yellowBright(
-        `[!] Number of rows not specified. Using default value: ${DEFAULT_ROWS}`
-      )
+    printer.warn(
+      `Number of rows not specified. Using default value: ${DEFAULT_ROWS}`
     );
     rows = DEFAULT_ROWS.toString();
   }
@@ -468,29 +438,19 @@ function getCLIOptions(): CLIOptions {
   let format: OutputFormat = options.format;
 
   if (!format) {
-    console.warn(
-      chalk.yellowBright(
-        "[*] Output format not specified. Using default value: json"
-      )
-    );
+    printer.warn("Output format not specified. Using default value: json");
     format = "json";
   }
 
   const envPath = options.env;
 
   if (!envPath) {
-    console.warn(
-      chalk.yellowBright(
-        "[*] Environment file not specified. Using default value: .env"
-      )
-    );
+    printer.warn("Environment file not specified. Using default value: .env");
     const { error } = dotenv.config({ path: ".env" });
 
     if (error) {
-      console.error(
-        chalk.redBright(
-          "[!] Error loading environment file. Please specify the environment file using -env option or add a .env file to current folder."
-        )
+      printer.error(
+        "Error loading environment file. Please specify the environment file using -env option or add a .env file to current folder."
       );
       process.exit(1);
     }
@@ -498,10 +458,8 @@ function getCLIOptions(): CLIOptions {
     const { error } = dotenv.config({ path: envPath });
 
     if (error) {
-      console.error(
-        chalk.redBright(
-          "[!] Error loading environment file. Please specify the correct environment file using -env option."
-        )
+      printer.error(
+        "Error loading environment file. Please specify the correct environment file using -env option."
       );
       process.exit(1);
     }
@@ -521,15 +479,15 @@ function getCLIOptions(): CLIOptions {
 
 function printBanner() {
   const messages = [
-    "⚡️SynthLite: A fast, lightweight and flexible synthetic data generation tool. 🚀",
-    "⚡️Author: Aditya Patange (AdiPat) <contact.adityapatange@gmail.com>",
-    "⚡️GitHub: https://www.github.com/AdiPat/synthlite",
-    "⚡️synthlite is a product of AdiPat Labs! 🌞",
+    "SynthLite: A fast, lightweight and flexible synthetic data generation tool. 🚀",
+    "Author: Aditya Patange (AdiPat) <contact.adityapatange@gmail.com>",
+    "GitHub: https://www.github.com/AdiPat/synthlite",
+    "synthlite is a product of AdiPat Labs! 🌞",
     "\n",
   ];
 
   messages.forEach((message) => {
-    console.log(chalk.cyanBright(message));
+    printer.info(message);
   });
 }
 
@@ -550,34 +508,26 @@ export async function synthlite() {
   try {
     printBanner();
     const options = getCLIOptions();
+    printer.setVerbose(options.verbose);
     assertAIConfig();
     setupOutputWriterEventHandler(options);
 
-    console.log(
-      chalk.greenBright("→ Parsing schema and constructing dataset.")
-    );
+    printer.info("Parsing schema and constructing dataset.");
     const dataset = await SynthliteDataset.fromSchemaFile(options.schema);
 
-    console.log(
-      chalk.greenBright(`→ Generating dataset of rows: ${options.rows}.`)
-    );
+    printer.info(`Generating dataset of rows: ${options.rows}.`);
     const generateStartTime = performance.now();
     await dataset.generate(parseInt(options.rows));
     const generateEndTime = performance.now();
-    console.log(
-      chalk.greenBright(
-        `→ Dataset generated in ${
-          (generateEndTime - generateStartTime) / 1000
-        } seconds.`
-      )
+    printer.info(
+      `Dataset generated in ${
+        (generateEndTime - generateStartTime) / 1000
+      } seconds.`
     );
-    console.log(chalk.greenBright(`→ Dataset saved to: ${options.output}!`));
-    console.log(
-      chalk.greenBright("⚡️ SynthLite run completed successfully! ⚡️")
-    );
+    printer.info(`Dataset saved to: ${options.output}!`);
+    printer.info("SynthLite run completed successfully! ⚡️");
   } catch (error: any) {
-    console.error(error);
-    console.error(chalk.redBright(`[!] Unexpected Failure: ${error.message}`));
+    printer.error(`Unexpected Failure: ${error.message}`);
     process.exit(1);
   }
 }

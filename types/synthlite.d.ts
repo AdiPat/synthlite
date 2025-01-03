@@ -16,7 +16,6 @@ export declare class SynthliteDataset {
     private schema;
     private emitter;
     constructor(jsonSchema: any);
-    printSchema(): void;
     static fromSchemaFile(schemaPath: string): Promise<SynthliteDataset>;
     generate(count: number): Promise<GeneratedDataset>;
     private mutateDuplicates;
