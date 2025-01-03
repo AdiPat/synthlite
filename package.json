@@ -1,6 +1,6 @@
 {
-  "name": "synthlite",
-  "version": "1.0.2",
+  "name": "@synthart/synthlite",
+  "version": "1.0.11",
   "description": "A fast, lightweight Gen AI powered synthetic data generator written in TypeScript. 🌞",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
@@ -13,9 +13,7 @@
     "test": "vitest --testTimeout 30000",
     "test:silent": "vitest --silent --testTimeout 30000",
     "test:coverage": "vitest --coverage --testTimeout 30000",
-    "test:coverage:silent": "vitest --coverage --silent --testTimeout 30000",
-    "prepublishOnly": "npm run build",
-    "publish": "npm publish --access public"
+    "test:coverage:silent": "vitest --coverage --silent --testTimeout 30000"
   },
   "files": [
     "dist",
@@ -38,6 +36,9 @@
   ],
   "author": "Aditya Patange (AdiPat) <contact.adityapatange@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@ai-sdk/anthropic": "^1.0.6",
     "@ai-sdk/openai": "^1.0.12",
