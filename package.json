@@ -1,7 +1,7 @@
 {
   "name": "synthlite",
-  "version": "1.0.1",
-  "description": "A fast, lightweight Groq-powered synthetic data generator written in TypeScript. 🌞",
+  "version": "1.0.2",
+  "description": "A fast, lightweight Gen AI powered synthetic data generator written in TypeScript. 🌞",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "bin": {
