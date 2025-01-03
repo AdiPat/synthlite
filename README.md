@@ -153,13 +153,34 @@ All these steps leverage the efficiency of various LLMs and can optionally tap i
 
 ## Setup Instructions 🔧
 
+You can install **SynthLite** using your favorite package manager—**npm**, **yarn**, or **pnpm**. Just pick one of the commands below:
+
+### npm
+
+```bash
+npm install synthlite
+```
+
+### yarn
+
+```bash
+yarn add synthlite
+```
+
+### Usage
+
+```bash
+npx synthlite <options>
+Example: npx synthlite -sc schema.json -o output.json -env .env -r 20
+```
+
 ### Prerequisites
 
 - **Node.js** v16+
 
 - **TypeScript** 4.x
 
-- Access to relevant AI models (if you plan to use LLM integration features)
+- Access to relevant AI models.
 
 ### Installation
 
@@ -228,7 +249,7 @@ All these steps leverage the efficiency of various LLMs and can optionally tap i
 
      Exports 1,000 samples to a `data.csv` file.
 
-3. **Optional Llama 3.1 Hook**  
+3. **Optional Llama 3.1 Hook**
    If you have Llama 3.3 integrated, you can configure your dataset to add advanced generative power to your fields. See our docs for usage examples (if available).
 
 ---
@@ -239,9 +260,6 @@ All these steps leverage the efficiency of various LLMs and can optionally tap i
 
 ```bash
 > npm start -- --schema ./mySchema.json --count 50 --output myData.json
-
-Generating 50 samples...
-Successfully saved to myData.json
 ```
 
 ---

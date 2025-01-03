@@ -12,7 +12,8 @@
 
 import { Command, OptionValues } from "commander";
 import { CLIOptions } from "../models";
-import { Config, Validator } from "../common";
+import { Config, Constants, Validator } from "../common";
+import packageJson from "../../package.json";
 
 /**
  * CLI: Handles command-line interface operations.
@@ -31,7 +32,7 @@ export class CLI {
       .description(
         "SynthLite: A fast, lightweight and flexible synthetic data generation tool."
       )
-      .version("1.0.0")
+      .version(packageJson.version)
       .option("-v, --verbose", "Enable verbose mode")
       .option("-sc, --schema <schema>", "Path to the schema file")
       .option("-o, --output <output>", "Path to the output file")
@@ -43,8 +44,9 @@ export class CLI {
 
     const options: OptionValues = program.opts();
 
-    Validator.validateCLIOptions(options);
     const envPath = await Validator.validateEnvPath(options.env);
+    await Validator.validateCLIOptions(options);
+
     Config.loadEnv(envPath);
 
     const verbose = options.verbose == undefined ? false : options.verbose;
@@ -53,7 +55,7 @@ export class CLI {
       verbose,
       schema: options.schema,
       output: options.output,
-      rows: options.rows,
+      rows: options.rows ?? Constants.DEFAULT_ROWS,
       format: options.format || "json",
       envPath: options.env || ".env",
     };

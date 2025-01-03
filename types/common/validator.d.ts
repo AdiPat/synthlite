@@ -1,15 +1,4 @@
 /**
- *
- * @file validator.ts
- * @author Aditya Patange (AdiPat) <contact.adityapatange@gmail.com>
- * @description 🚀 Validator class for validating CLI options and environment paths.
- * @date January 2024
- * @version 1.0.0
- * @license Affero General Public License v3.0
- * ✨ "In the shadows, truth whispers." — Unknown
- *
- */
-/**
  * Validator: Validates CLI options and environment paths.
  * @class Validator
  */
@@ -19,7 +8,7 @@ export declare class Validator {
      *
      * @param options - The CLI options to validate.
      */
-    static validateCLIOptions(options: any): void;
+    static validateCLIOptions(options: any): Promise<void>;
     /**
      * Validates the environment file path.
      *
@@ -27,4 +16,14 @@ export declare class Validator {
      * @returns The final environment file path.
      */
     static validateEnvPath(envPath: string): Promise<string>;
+    /**
+     * Validates the file path.
+     * @param filePath - The path to the file to validate.
+     */
+    private static validateFilePath;
+    /**
+     * Creates a file if it does not exist.
+     * @param filePath - The path to the file to create.
+     */
+    private static createFileIfNotExists;
 }

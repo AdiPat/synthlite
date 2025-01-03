@@ -205,6 +205,10 @@ export class SynthliteDataset {
       }
     }
 
+    printer.info(
+      `Total unique rows generated so far: ${data.length} / ${count}.`
+    );
+
     return new GeneratedDataset(data);
   }
 

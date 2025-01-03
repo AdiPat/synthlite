@@ -9,7 +9,6 @@
  * ✨ "In the shadows, truth whispers." — Unknown
  *
  */
-
 import { OutputFormat } from "../models";
 import { Constants } from "./constants";
 import { printer } from "./printer";
@@ -25,7 +24,7 @@ export class Validator {
    *
    * @param options - The CLI options to validate.
    */
-  static validateCLIOptions(options: any): void {
+  static async validateCLIOptions(options: any): Promise<void> {
     const schema = options.schema;
 
     if (!schema) {
@@ -44,6 +43,9 @@ export class Validator {
       process.exit(1);
     }
 
+    await Validator.createFileIfNotExists(output);
+    await Validator.validateFilePath(output);
+
     let rows = options.rows;
 
     if (!rows) {
@@ -51,6 +53,11 @@ export class Validator {
         `Number of rows not specified. Using default value: ${Constants.DEFAULT_ROWS}`
       );
       rows = Constants.DEFAULT_ROWS.toString();
+    }
+
+    if (isNaN(rows)) {
+      printer.error("Number of rows must be a valid number.");
+      process.exit(1);
     }
 
     let format: OutputFormat = options.format;
@@ -87,8 +94,37 @@ export class Validator {
         printer.error(error);
         process.exit(1);
       }
+    } else {
+      await Validator.validateFilePath(envPath);
     }
 
     return finalEnvPath;
+  }
+
+  /**
+   * Validates the file path.
+   * @param filePath - The path to the file to validate.
+   */
+  private static async validateFilePath(filePath: string): Promise<void> {
+    try {
+      await fs.access(filePath);
+    } catch (error) {
+      printer.error(
+        `File not found at path: ${filePath}. Please specify a valid file path.`
+      );
+      process.exit(1);
+    }
+  }
+
+  /**
+   * Creates a file if it does not exist.
+   * @param filePath - The path to the file to create.
+   */
+  private static async createFileIfNotExists(filePath: string): Promise<void> {
+    try {
+      await fs.access(filePath);
+    } catch (error) {
+      await fs.writeFile(filePath, "");
+    }
   }
 }

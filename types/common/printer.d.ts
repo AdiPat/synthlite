@@ -52,7 +52,7 @@ export declare class Printer {
      */
     info(message: string): void;
     /**
-     * Prints a debug message to the console in pink.
+     * Prints a debug message to the console in teal.
      * @param {string} message - The message to print.
      */
     debug(message: string): void;

@@ -49,7 +49,7 @@ export class SynthLiteCLI {
       const dataset = await SynthliteDataset.fromSchemaFile(options.schema);
       const generateStartTime = performance.now();
       await this.generateDataset(options, dataset);
-      const totalTimeInSeconds = (generateStartTime - performance.now()) / 1000;
+      const totalTimeInSeconds = (performance.now() - generateStartTime) / 1000;
       printer.success(
         `Dataset for schema '${options.schema}' generated in ${totalTimeInSeconds} seconds.`
       );

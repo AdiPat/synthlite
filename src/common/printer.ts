@@ -22,8 +22,9 @@ export class Printer {
   private colourPrinter: {
     [colour: string]: chalk.Chalk;
   } = {
-    pink: chalk.hex("#FF1493") as chalk.Chalk,
-    orange: chalk.hex("#FFA500") as chalk.Chalk,
+    teal: chalk.hex("#008080") as chalk.Chalk, // Muted teal for debug messages
+    gold: chalk.hex("#B8860B") as chalk.Chalk, // Gold for banner messages
+    gray: chalk.hex("#A9A9A9") as chalk.Chalk, // Gray for subtle text
   };
 
   /**
@@ -83,7 +84,7 @@ export class Printer {
    * @param {string} message - The message to print.
    */
   public error(message: string) {
-    return this.px("[!]", message, "redBright", false);
+    return this.px("[!]", message, "red", false);
   }
 
   /**
@@ -91,15 +92,15 @@ export class Printer {
    * @param {string} message - The message to print.
    */
   public info(message: string) {
-    return this.px("[*]", message, "cyanBright", false);
+    return this.px("[→]", message, "blue", false);
   }
 
   /**
-   * Prints a debug message to the console in pink.
+   * Prints a debug message to the console in teal.
    * @param {string} message - The message to print.
    */
   public debug(message: string) {
-    return this.px("→", message, "pink", true);
+    return this.px("[◎]", message, "teal", true);
   }
 
   /**
@@ -107,7 +108,7 @@ export class Printer {
    * @param {string} message - The message to print.
    */
   public warn(message: string) {
-    return this.px("[!]", message, "yellowBright", false);
+    return this.px("[!]", message, "yellow", false);
   }
 
   /**
@@ -116,7 +117,7 @@ export class Printer {
    * @returns
    */
   public success(message: string) {
-    return this.px("[✔]", message, "greenBright", false);
+    return this.px("[✔]", message, "green", false);
   }
 
   /**
@@ -139,15 +140,15 @@ export class Printer {
    */
   public printBanner(): void {
     const messages = [
-      "SynthLite: A fast, lightweight and flexible synthetic data generation tool. 🚀",
+      "SynthLite: A fast, lightweight and flexible synthetic data generation tool.",
       "Author: Aditya Patange (AdiPat) <contact.adityapatange@gmail.com>",
       "GitHub: https://www.github.com/AdiPat/synthlite",
-      "synthlite is a product of AdiPat Labs! 🌞",
+      "synthlite is a product of AdiPat Labs!",
       "\n",
     ];
 
     messages.forEach((message) => {
-      this.px("⚡️", message, "orange", false);
+      this.px("⚡️", message, "gold", false);
     });
   }
 }
