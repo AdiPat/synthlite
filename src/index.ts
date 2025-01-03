@@ -1,7 +1,8 @@
 import dotenv from "dotenv";
+import { synthlite } from "./synthlite";
 
 dotenv.config();
 
 export async function main() {
-  console.log("Hello from SynthLite 🚀");
+  await synthlite();
 }

@@ -1,0 +1,636 @@
+[
+  {
+    "model": "NuclearPulse-X1",
+    "manufacturer": "RadiantTech Solutions",
+    "radioisotope": "Plutonium-238",
+    "power_output_mW": 45,
+    "energy_density_Wh_per_kg": 2300,
+    "half_life_years": 87.7,
+    "dimensions_mm": {
+      "length": 75,
+      "width": 50,
+      "height": 25
+    },
+    "weight_g": 125,
+    "operating_temperature_range_C": {
+      "min": -40,
+      "max": 120
+    },
+    "applications": [
+      "Space Exploration",
+      "Deep Sea Probes"
+    ]
+  },
+  {
+    "model": "AtomCore-M3",
+    "manufacturer": "NuclearNova Inc.",
+    "radioisotope": "Strontium-90",
+    "power_output_mW": 22,
+    "energy_density_Wh_per_kg": 1800,
+    "half_life_years": 28.8,
+    "dimensions_mm": {
+      "length": 60,
+      "width": 40,
+      "height": 20
+    },
+    "weight_g": 85,
+    "operating_temperature_range_C": {
+      "min": -20,
+      "max": 85
+    },
+    "applications": [
+      "Medical Implants",
+      "Remote Sensors"
+    ]
+  },
+  {
+    "model": "NuclearNest-P5",
+    "manufacturer": "Isotope Innovations",
+    "radioisotope": "Polonium-210",
+    "power_output_mW": 35,
+    "energy_density_Wh_per_kg": 2100,
+    "half_life_years": 0.38,
+    "dimensions_mm": {
+      "length": 55,
+      "width": 35,
+      "height": 15
+    },
+    "weight_g": 65,
+    "operating_temperature_range_C": {
+      "min": -10,
+      "max": 70
+    },
+    "applications": [
+      "Satellite Communications"
+    ]
+  },
+  {
+    "model": "RadiantPulse-G7",
+    "manufacturer": "Quantum Energy Systems",
+    "radioisotope": "Americium-241",
+    "power_output_mW": 18,
+    "energy_density_Wh_per_kg": 1950,
+    "half_life_years": 432.2,
+    "dimensions_mm": {
+      "length": 45,
+      "width": 30,
+      "height": 10
+    },
+    "weight_g": 55,
+    "operating_temperature_range_C": {
+      "min": -55,
+      "max": 100
+    },
+    "applications": [
+      "Aerospace Instrumentation"
+    ]
+  },
+  {
+    "model": "NuclearHeart-R2",
+    "manufacturer": "BioNuclear Technologies",
+    "radioisotope": "Tritium",
+    "power_output_mW": 12,
+    "energy_density_Wh_per_kg": 1700,
+    "half_life_years": 12.3,
+    "dimensions_mm": {
+      "length": 40,
+      "width": 25,
+      "height": 8
+    },
+    "weight_g": 40,
+    "operating_temperature_range_C": {
+      "min": 0,
+      "max": 60
+    },
+    "applications": [
+      "Pacemakers",
+      "Emergency Beacons"
+    ]
+  },
+  {
+    "model": "AtomicEdge-S9",
+    "manufacturer": "Stellar Power Solutions",
+    "radioisotope": "Nickel-63",
+    "power_output_mW": 28,
+    "energy_density_Wh_per_kg": 2050,
+    "half_life_years": 100.1,
+    "dimensions_mm": {
+      "length": 65,
+      "width": 45,
+      "height": 22
+    },
+    "weight_g": 95,
+    "operating_temperature_range_C": {
+      "min": -30,
+      "max": 90
+    },
+    "applications": [
+      "Deep Space Probes",
+      "Underwater Research"
+    ]
+  },
+  {
+    "model": "NuclearNova-T4",
+    "manufacturer": "Cosmic Energy Dynamics",
+    "radioisotope": "Plutonium-238",
+    "power_output_mW": 52,
+    "energy_density_Wh_per_kg": 2400,
+    "half_life_years": 87.7,
+    "dimensions_mm": {
+      "length": 85,
+      "width": 60,
+      "height": 35
+    },
+    "weight_g": 145,
+    "operating_temperature_range_C": {
+      "min": -45,
+      "max": 130
+    },
+    "applications": [
+      "Mars Rover Systems"
+    ]
+  },
+  {
+    "model": "RadiantCore-L6",
+    "manufacturer": "Neutron Technologies",
+    "radioisotope": "Curium-244",
+    "power_output_mW": 38,
+    "energy_density_Wh_per_kg": 1900,
+    "half_life_years": 18.1,
+    "dimensions_mm": {
+      "length": 58,
+      "width": 38,
+      "height": 18
+    },
+    "weight_g": 75,
+    "operating_temperature_range_C": {
+      "min": -15,
+      "max": 80
+    },
+    "applications": [
+      "Scientific Research Equipment"
+    ]
+  },
+  {
+    "model": "AtomPulse-K2",
+    "manufacturer": "Galactic Power Systems",
+    "radioisotope": "Promethium-147",
+    "power_output_mW": 16,
+    "energy_density_Wh_per_kg": 1750,
+    "half_life_years": 2.6,
+    "dimensions_mm": {
+      "length": 42,
+      "width": 28,
+      "height": 12
+    },
+    "weight_g": 50,
+    "operating_temperature_range_C": {
+      "min": -5,
+      "max": 65
+    },
+    "applications": [
+      "Portable Medical Devices"
+    ]
+  },
+  {
+    "model": "NuclearWave-J8",
+    "manufacturer": "Interstellar Energy Corp",
+    "radioisotope": "Californium-252",
+    "power_output_mW": 62,
+    "energy_density_Wh_per_kg": 2500,
+    "half_life_years": 2.6,
+    "dimensions_mm": {
+      "length": 95,
+      "width": 70,
+      "height": 40
+    },
+    "weight_g": 165,
+    "operating_temperature_range_C": {
+      "min": -50,
+      "max": 140
+    },
+    "applications": [
+      "Deep Space Exploration",
+      "Extreme Environment Sensors"
+    ]
+  },
+  {
+    "model": "NuclearPulse-X2",
+    "manufacturer": "NuclearDynamics Inc.",
+    "radioisotope": "Plutonium-239",
+    "power_output_mW": 52,
+    "energy_density_Wh_per_kg": 2400,
+    "half_life_years": 88.5,
+    "dimensions_mm": {
+      "length": 80,
+      "width": 55,
+      "height": 30
+    },
+    "weight_g": 135,
+    "operating_temperature_range_C": {
+      "min": -45,
+      "max": 125
+    },
+    "applications": [
+      "Satellite Communications",
+      "Remote Sensing"
+    ]
+  },
+  {
+    "model": "AtomCore-M4",
+    "manufacturer": "NuclearNova Technologies",
+    "radioisotope": "Plutonium-238",
+    "power_output_mW": 25,
+    "energy_density_Wh_per_kg": 1900,
+    "half_life_years": 87.7,
+    "dimensions_mm": {
+      "length": 65,
+      "width": 45,
+      "height": 22
+    },
+    "weight_g": 90,
+    "operating_temperature_range_C": {
+      "min": -25,
+      "max": 90
+    },
+    "applications": [
+      "Space Probes",
+      "Remote Sensors"
+    ]
+  },
+  {
+    "model": "NuclearNest-P6",
+    "manufacturer": "Atomic Dynamics",
+    "radioisotope": "Plutonium-238",
+    "power_output_mW": 42,
+    "energy_density_Wh_per_kg": 2250,
+    "half_life_years": 87.7,
+    "dimensions_mm": {
+      "length": 58,
+      "width": 38,
+      "height": 18
+    },
+    "weight_g": 72,
+    "operating_temperature_range_C": {
+      "min": -15,
+      "max": 75
+    },
+    "applications": [
+      "Deep Space Probes"
+    ]
+  },
+  {
+    "model": "RadiantPulse-G8",
+    "manufacturer": "Quantum Energy Solutions",
+    "radioisotope": "Plutonium-238",
+    "power_output_mW": 22,
+    "energy_density_Wh_per_kg": 1980,
+    "half_life_years": 437.5,
+    "dimensions_mm": {
+      "length": 48,
+      "width": 33,
+      "height": 12
+    },
+    "weight_g": 58,
+    "operating_temperature_range_C": {
+      "min": -50,
+      "max": 105
+    },
+    "applications": [
+      "Deep Space Probes"
+    ]
+  },
+  {
+    "model": "NuclearHeart-R3",
+    "manufacturer": "NuclearDynamics Inc.",
+    "radioisotope": "Plutonium-238",
+    "power_output_mW": 15,
+    "energy_density_Wh_per_kg": 1800,
+    "half_life_years": 12.5,
+    "dimensions_mm": {
+      "length": 42,
+      "width": 27,
+      "height": 9
+    },
+    "weight_g": 45,
+    "operating_temperature_range_C": {
+      "min": -5,
+      "max": 65
+    },
+    "applications": [
+      "Medical Implants",
+      "Satellite Systems"
+    ]
+  },
+  {
+    "model": "AtomicEdge-S10",
+    "manufacturer": "Quantum Isotope Technologies",
+    "radioisotope": "Tritium",
+    "power_output_mW": 35,
+    "energy_density_Wh_per_kg": 2200,
+    "half_life_years": 12.3,
+    "dimensions_mm": {
+      "length": 68,
+      "width": 48,
+      "height": 25
+    },
+    "weight_g": 105,
+    "operating_temperature_range_C": {
+      "min": -40,
+      "max": 85
+    },
+    "applications": [
+      "Satellite Communications",
+      "Remote Sensing"
+    ]
+  },
+  {
+    "model": "NuclearNova-T5",
+    "manufacturer": "Stellar Power Solutions",
+    "radioisotope": "Plutonium-239",
+    "power_output_mW": 48,
+    "energy_density_Wh_per_kg": 2350,
+    "half_life_years": 83.5,
+    "dimensions_mm": {
+      "length": 82,
+      "width": 58,
+      "height": 33
+    },
+    "weight_g": 138,
+    "operating_temperature_range_C": {
+      "min": -40,
+      "max": 125
+    },
+    "applications": [
+      "Deep Space Probes"
+    ]
+  },
+  {
+    "model": "RadiantCore-L7",
+    "manufacturer": "Atomic Innovations",
+    "radioisotope": "Plutonium-238",
+    "power_output_mW": 45,
+    "energy_density_Wh_per_kg": 2100,
+    "half_life_years": 87.7,
+    "dimensions_mm": {
+      "length": 62,
+      "width": 42,
+      "height": 20
+    },
+    "weight_g": 82,
+    "operating_temperature_range_C": {
+      "min": -20,
+      "max": 85
+    },
+    "applications": [
+      "Space Exploration Instruments"
+    ]
+  },
+  {
+    "model": "AtomPulse-K3",
+    "manufacturer": "Stellar Energy Solutions",
+    "radioisotope": "Strontium-90",
+    "power_output_mW": 22,
+    "energy_density_Wh_per_kg": 1850,
+    "half_life_years": 28.8,
+    "dimensions_mm": {
+      "length": 45,
+      "width": 30,
+      "height": 15
+    },
+    "weight_g": 55,
+    "operating_temperature_range_C": {
+      "min": -10,
+      "max": 70
+    },
+    "applications": [
+      "Remote Sensing Equipment"
+    ]
+  },
+  {
+    "model": "NuclearWave-K9",
+    "manufacturer": "Quantum Isotope Systems",
+    "radioisotope": "Plutonium-238",
+    "power_output_mW": 55,
+    "energy_density_Wh_per_kg": 2300,
+    "half_life_years": 87.7,
+    "dimensions_mm": {
+      "length": 92,
+      "width": 68,
+      "height": 38
+    },
+    "weight_g": 158,
+    "operating_temperature_range_C": {
+      "min": -45,
+      "max": 135
+    },
+    "applications": [
+      "Satellite Power Systems",
+      "Remote Monitoring Equipment"
+    ]
+  },
+  {
+    "model": "NuclearPulse-X1",
+    "manufacturer": "RadiantTech Solutions",
+    "radioisotope": "Americium-241",
+    "power_output_mW": 45,
+    "energy_density_Wh_per_kg": 2300,
+    "half_life_years": 87.7,
+    "dimensions_mm": {
+      "length": 75,
+      "width": 50,
+      "height": 25
+    },
+    "weight_g": 135,
+    "operating_temperature_range_C": {
+      "min": -35,
+      "max": 115
+    },
+    "applications": [
+      "Space Exploration",
+      "Deep Sea Probes"
+    ]
+  },
+  {
+    "model": "AtomCore-M3",
+    "manufacturer": "RadiaTech Solutions",
+    "radioisotope": "Strontium-90",
+    "power_output_mW": 22,
+    "half_life_years": 29.5,
+    "applications": [
+      "Space Exploration",
+      "Remote Sensors"
+    ]
+  },
+  {
+    "model": "NuclearNest-P6",
+    "manufacturer": "Isotope Innovations",
+    "radioisotope": "Polonium-210",
+    "power_output_mW": 42,
+    "energy_density_Wh_per_kg": 2100,
+    "half_life_years": 0.38,
+    "dimensions_mm": {
+      "length": 55,
+      "width": 35,
+      "height": 15
+    },
+    "weight_g": 65,
+    "operating_temperature_range_C": {
+      "min": -10,
+      "max": 70
+    },
+    "applications": [
+      "Remote Sensing Equipment"
+    ]
+  },
+  {
+    "model": "RadiantPulse-G8",
+    "manufacturer": "Quantum Energy Systems",
+    "radioisotope": "Americium-241",
+    "power_output_mW": 22,
+    "energy_density_Wh_per_kg": 1950,
+    "half_life_years": 435.7,
+    "dimensions_mm": {
+      "length": 45,
+      "width": 30,
+      "height": 10
+    },
+    "weight_g": 55,
+    "operating_temperature_range_C": {
+      "min": -55,
+      "max": 100
+    },
+    "applications": [
+      "Aerospace Instrumentation"
+    ]
+  },
+  {
+    "model": "NuclearHeart-R2",
+    "manufacturer": "RadiantPower Solutions",
+    "radioisotope": "Tritium",
+    "power_output_mW": 15,
+    "energy_density_Wh_per_kg": 1700,
+    "half_life_years": 12.7,
+    "dimensions_mm": {
+      "length": 40,
+      "width": 25,
+      "height": 8
+    },
+    "weight_g": 40,
+    "operating_temperature_range_C": {
+      "min": 0,
+      "max": 60
+    },
+    "applications": [
+      "Pacemakers",
+      "Emergency Beacons"
+    ]
+  },
+  {
+    "model": "AtomicEdge-S10",
+    "manufacturer": "Stellar Power Solutions",
+    "radioisotope": "Nickel-63",
+    "power_output_mW": 28,
+    "energy_density_Wh_per_kg": 2050,
+    "half_life_years": 100.1,
+    "dimensions_mm": {
+      "length": 67,
+      "width": 47,
+      "height": 24
+    },
+    "weight_g": 98,
+    "operating_temperature_range_C": {
+      "min": -30,
+      "max": 90
+    },
+    "applications": [
+      "Deep Space Probes",
+      "Underwater Research"
+    ]
+  },
+  {
+    "model": "NuclearNova-T5",
+    "manufacturer": "Cosmic Energy Dynamics",
+    "radioisotope": "Americium-241",
+    "power_output_mW": 47,
+    "energy_density_Wh_per_kg": 2400,
+    "half_life_years": 87.7,
+    "dimensions_mm": {
+      "length": 82,
+      "width": 58,
+      "height": 33
+    },
+    "weight_g": 145,
+    "operating_temperature_range_C": {
+      "min": -45,
+      "max": 130
+    },
+    "applications": [
+      "Mars Rover Systems"
+    ]
+  },
+  {
+    "model": "RadiantCore-L6",
+    "manufacturer": "Atomic Innovations",
+    "radioisotope": "Curium-244",
+    "power_output_mW": 38,
+    "energy_density_Wh_per_kg": 1900,
+    "half_life_years": 16.5,
+    "dimensions_mm": {
+      "length": 58,
+      "width": 38,
+      "height": 18
+    },
+    "weight_g": 82,
+    "operating_temperature_range_C": {
+      "min": -15,
+      "max": 80
+    },
+    "applications": [
+      "Scientific Research Equipment"
+    ]
+  },
+  {
+    "model": "AtomPulse-K2",
+    "manufacturer": "Galactic Power Systems",
+    "radioisotope": "Strontium-90",
+    "power_output_mW": 22,
+    "energy_density_Wh_per_kg": 1750,
+    "half_life_years": 28.8,
+    "dimensions_mm": {
+      "length": 42,
+      "width": 28,
+      "height": 12
+    },
+    "weight_g": 55,
+    "operating_temperature_range_C": {
+      "min": -5,
+      "max": 65
+    },
+    "applications": [
+      "Portable Medical Devices"
+    ]
+  },
+  {
+    "model": "NuclearWave-J9",
+    "manufacturer": "Interstellar Energy Corp",
+    "radioisotope": "Plutonium-238",
+    "power_output_mW": 62,
+    "energy_density_Wh_per_kg": 2500,
+    "half_life_years": 87.7,
+    "dimensions_mm": {
+      "length": 95,
+      "width": 70,
+      "height": 40
+    },
+    "weight_g": 165,
+    "operating_temperature_range_C": {
+      "min": -50,
+      "max": 140
+    },
+    "applications": [
+      "Deep Space Exploration",
+      "Extreme Environment Sensors"
+    ]
+  }
+]

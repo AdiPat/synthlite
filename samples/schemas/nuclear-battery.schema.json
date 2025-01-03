@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NuclearBatteryStats",
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "description": "Model name or identifier of the nuclear battery."
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Name of the company or entity that produced the battery."
+    },
+    "radioisotope": {
+      "type": "string",
+      "description": "Type of radioactive isotope used as the energy source, e.g., Plutonium-238."
+    },
+    "power_output_mW": {
+      "type": "number",
+      "description": "Electrical power output in milliwatts (mW)."
+    },
+    "energy_density_Wh_per_kg": {
+      "type": "number",
+      "description": "Energy density measured in watt-hours per kilogram (Wh/kg)."
+    },
+    "half_life_years": {
+      "type": "number",
+      "description": "Half-life of the radioisotope in years, indicating the time taken for its activity to reduce by half."
+    },
+    "dimensions_mm": {
+      "type": "object",
+      "description": "Physical dimensions of the battery in millimeters.",
+      "properties": {
+        "length": {
+          "type": "number",
+          "description": "Length in millimeters."
+        },
+        "width": {
+          "type": "number",
+          "description": "Width in millimeters."
+        },
+        "height": {
+          "type": "number",
+          "description": "Height in millimeters."
+        }
+      },
+      "required": ["length", "width", "height"]
+    },
+    "weight_g": {
+      "type": "number",
+      "description": "Weight of the battery in grams."
+    },
+    "operating_temperature_range_C": {
+      "type": "object",
+      "description": "Operational temperature range in degrees Celsius.",
+      "properties": {
+        "min": {
+          "type": "number",
+          "description": "Minimum operating temperature in degrees Celsius."
+        },
+        "max": {
+          "type": "number",
+          "description": "Maximum operating temperature in degrees Celsius."
+        }
+      },
+      "required": ["min", "max"]
+    },
+    "applications": {
+      "type": "array",
+      "description": "List of typical applications for the nuclear battery.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "model",
+    "manufacturer",
+    "radioisotope",
+    "power_output_mW",
+    "half_life_years"
+  ]
+}

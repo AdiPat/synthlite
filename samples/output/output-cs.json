@@ -1,0 +1,542 @@
+[
+  {
+    "timestamp": "2023-11-15T09:55:38Z",
+    "sensor_id": "LIDAR-012",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.7128,
+      "longitude": -74.008
+    },
+    "data": "urban_green_space_volumetric_analysis",
+    "id": "cd2d85f6-2865-4532-9847-3590cbc8ac0c"
+  },
+  {
+    "timestamp": "2023-11-15T09:27:22Z",
+    "sensor_id": "LIDAR-007",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.7138,
+      "longitude": -74.0055
+    },
+    "data": "construction_site_mapping",
+    "id": "cc432859-5a84-4ef1-b95e-c2d82880ec41"
+  },
+  {
+    "timestamp": "2023-11-15T09:50:56Z",
+    "sensor_id": "ULTRA-008",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7152,
+      "longitude": -74.0075
+    },
+    "data": "marine_vessel_proximity_alert",
+    "id": "bab9fcf4-779e-4ec8-9424-d01ab94a181f"
+  },
+  {
+    "timestamp": "2023-11-15T09:23:41Z",
+    "sensor_id": "LIDAR-001",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    },
+    "data": "point_cloud_urban_scene_manhattan",
+    "id": "8353ef00-7a65-4d1e-8ec0-48a06996355a"
+  },
+  {
+    "timestamp": "2023-11-15T09:40:44Z",
+    "sensor_id": "CAM-013",
+    "sensor_type": "Camera",
+    "location": {
+      "latitude": 40.7135,
+      "longitude": -74.005
+    },
+    "data": "wildlife_conservation_tracking",
+    "id": "31475618-761d-44ac-a8af-191805c7b7f0"
+  },
+  {
+    "timestamp": "2023-11-15T10:16:33Z",
+    "sensor_id": "ULTRA-012",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7148,
+      "longitude": -74.007
+    },
+    "data": "warehouse_robot_obstacle_avoidance",
+    "id": "22c229e5-4694-4430-b442-ee17bf28ae80"
+  },
+  {
+    "timestamp": "2023-11-15T11:30:45Z",
+    "sensor_id": "GPS-025",
+    "sensor_type": "GPS",
+    "location": {
+      "latitude": 40.7175,
+      "longitude": -74.0105
+    },
+    "data": "precision_crop_yield_monitoring",
+    "id": "3594fd01-1ee0-4735-a98c-65ac6ac7134e"
+  },
+  {
+    "timestamp": "2023-11-15T10:22:39Z",
+    "sensor_id": "ULTRA-018",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7152,
+      "longitude": -74.0075
+    },
+    "data": "underwater_drone_proximity_sensing",
+    "id": "7f43a1c6-7a7f-46ca-9176-04bad30f5a08"
+  },
+  {
+    "timestamp": "2023-11-15T10:35:56Z",
+    "sensor_id": "IMU-014",
+    "sensor_type": "IMU",
+    "location": {
+      "latitude": 40.7147,
+      "longitude": -74.0035
+    },
+    "data": "robotic_exoskeleton_motion_analysis",
+    "id": "80093cb6-e20f-499e-b696-9da860a8d799"
+  },
+  {
+    "timestamp": "2023-11-15T10:23:50Z",
+    "sensor_id": "LIDAR-019",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.716,
+      "longitude": -74.0085
+    },
+    "data": "forest_canopy_terrain_mapping",
+    "id": "34dced04-5b6f-4b54-b1ad-b37918619efe"
+  },
+  {
+    "timestamp": "2023-11-15T09:24:12Z",
+    "sensor_id": "RADAR-002",
+    "sensor_type": "Radar",
+    "location": {
+      "latitude": 40.715,
+      "longitude": -74.0075
+    },
+    "data": "vehicle_detection_highway_traffic",
+    "id": "c39f7446-e871-4f1c-b492-ba86b4ac8702"
+  },
+  {
+    "timestamp": "2023-11-15T09:25:03Z",
+    "sensor_id": "CAM-003",
+    "sensor_type": "Camera",
+    "location": {
+      "latitude": 40.7135,
+      "longitude": -74.005
+    },
+    "data": "pedestrian_crosswalk_surveillance",
+    "id": "d8a31647-f2c2-41f1-9b26-a2611f84eac3"
+  },
+  {
+    "timestamp": "2023-11-15T11:22:39Z",
+    "sensor_id": "ULTRA-019",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7153,
+      "longitude": -74.0074
+    },
+    "data": "underwater_pipeline_inspection",
+    "id": "52e147df-e00f-477e-9ed3-1aa7058b619e"
+  },
+  {
+    "timestamp": "2023-11-15T11:26:47Z",
+    "sensor_id": "IMU-007",
+    "sensor_type": "IMU",
+    "location": {
+      "latitude": 40.7126,
+      "longitude": -74.0041
+    },
+    "data": "robotic_arm_motion_tracking",
+    "id": "c869e50f-ba44-4293-9e75-64f8dd028da4"
+  },
+  {
+    "timestamp": "2023-11-15T10:50:02Z",
+    "sensor_id": "CAM-018",
+    "sensor_type": "Camera",
+    "location": {
+      "latitude": 40.7155,
+      "longitude": -74.0065
+    },
+    "data": "renewable_energy_infrastructure_inspection",
+    "id": "8d7a6a67-2ad5-4720-9b77-2628806ab42d"
+  },
+  {
+    "timestamp": "2023-11-15T09:28:01Z",
+    "sensor_id": "RADAR-008",
+    "sensor_type": "Radar",
+    "location": {
+      "latitude": 40.7155,
+      "longitude": -74.007
+    },
+    "data": "maritime_vessel_tracking",
+    "id": "3b6ef86f-292e-45eb-ada3-404265320995"
+  },
+  {
+    "timestamp": "2023-11-15T11:40:33Z",
+    "sensor_id": "IMU-023",
+    "sensor_type": "IMU",
+    "location": {
+      "latitude": 40.7141,
+      "longitude": -74.0026
+    },
+    "data": "aerial_drone_wind_compensation",
+    "id": "3a624de5-f696-4b39-a6b9-f92161391bf2"
+  },
+  {
+    "timestamp": "2023-11-15T10:17:44Z",
+    "sensor_id": "LIDAR-013",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.7155,
+      "longitude": -74.008
+    },
+    "data": "urban_infrastructure_3d_scanning",
+    "id": "8c315277-f207-4e5a-bd8b-e01076716a9d"
+  },
+  {
+    "timestamp": "2023-11-15T09:26:15Z",
+    "sensor_id": "GPS-005",
+    "sensor_type": "GPS",
+    "location": {
+      "latitude": 40.716,
+      "longitude": -74.008
+    },
+    "data": "navigation_route_tracking",
+    "id": "98b4488c-0bda-4bce-83dc-0f855e0501b1"
+  },
+  {
+    "timestamp": "2023-11-15T11:26:15Z",
+    "sensor_id": "GPS-006",
+    "sensor_type": "GPS",
+    "location": {
+      "latitude": 40.7161,
+      "longitude": -74.0081
+    },
+    "data": "autonomous_vehicle_route_optimization",
+    "id": "556e8163-6818-4885-ae70-2b9302f177e7"
+  },
+  {
+    "timestamp": "2023-11-15T10:15:22Z",
+    "sensor_id": "IMU-011",
+    "sensor_type": "IMU",
+    "location": {
+      "latitude": 40.713,
+      "longitude": -74.0035
+    },
+    "data": "autonomous_vehicle_stabilization",
+    "id": "17c93f6f-f3a8-4810-9891-955eeb7dab1b"
+  },
+  {
+    "timestamp": "2023-11-15T09:35:12Z",
+    "sensor_id": "ULTRA-015",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7122,
+      "longitude": -74.0055
+    },
+    "data": "underwater_object_detection",
+    "id": "e717fd94-9c01-43ef-a4cf-5149e2c7eebd"
+  },
+  {
+    "timestamp": "2023-11-15T10:24:01Z",
+    "sensor_id": "CAM-020",
+    "sensor_type": "Camera",
+    "location": {
+      "latitude": 40.7145,
+      "longitude": -74.006
+    },
+    "data": "industrial_equipment_monitoring",
+    "id": "facd7c77-8932-4e0e-bd1a-958342fff2c3"
+  },
+  {
+    "timestamp": "2023-11-15T11:23:41Z",
+    "sensor_id": "LIDAR-002",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.7129,
+      "longitude": -74.0062
+    },
+    "data": "urban_infrastructure_3d_mapping",
+    "id": "dbdd2664-bfb0-4e25-84ed-b95fcf50008b"
+  },
+  {
+    "timestamp": "2023-11-15T09:26:47Z",
+    "sensor_id": "IMU-006",
+    "sensor_type": "IMU",
+    "location": {
+      "latitude": 40.7125,
+      "longitude": -74.004
+    },
+    "data": "vehicle_motion_dynamics",
+    "id": "5cbed177-42f0-46d8-bf6d-3b86b638ed16"
+  },
+  {
+    "timestamp": "2023-11-15T10:21:28Z",
+    "sensor_id": "IMU-017",
+    "sensor_type": "IMU",
+    "location": {
+      "latitude": 40.7137,
+      "longitude": -74.0045
+    },
+    "data": "robotic_arm_motion_tracking",
+    "id": "2e498792-d32d-4929-9840-7fdc5807695f"
+  },
+  {
+    "timestamp": "2023-11-15T11:16:33Z",
+    "sensor_id": "ULTRA-013",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7149,
+      "longitude": -74.0071
+    },
+    "data": "warehouse_robot_collision_prevention",
+    "id": "6abd99b5-3397-4632-ab12-b9a758e4d557"
+  },
+  {
+    "timestamp": "2023-11-15T11:27:22Z",
+    "sensor_id": "LIDAR-008",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.7139,
+      "longitude": -74.0056
+    },
+    "data": "urban_development_terrain_scanning",
+    "id": "207a68bb-4a1c-4c1e-8b0c-873f3fc9e2b6"
+  },
+  {
+    "timestamp": "2023-11-15T10:19:06Z",
+    "sensor_id": "RADAR-015",
+    "sensor_type": "Radar",
+    "location": {
+      "latitude": 40.7162,
+      "longitude": -74.009
+    },
+    "data": "aerospace_object_tracking",
+    "id": "227d8883-225c-462f-bc55-3bb16a988dd1"
+  },
+  {
+    "timestamp": "2023-11-15T11:24:01Z",
+    "sensor_id": "CAM-021",
+    "sensor_type": "Camera",
+    "location": {
+      "latitude": 40.7146,
+      "longitude": -74.0061
+    },
+    "data": "smart_factory_equipment_tracking",
+    "id": "c0acba2f-9b3f-4355-b5a5-e9d6bc1755c0"
+  },
+  {
+    "timestamp": "2023-11-15T10:40:33Z",
+    "sensor_id": "IMU-022",
+    "sensor_type": "IMU",
+    "location": {
+      "latitude": 40.714,
+      "longitude": -74.0025
+    },
+    "data": "drone_flight_stabilization",
+    "id": "5c8579c1-565d-449f-8d27-97d3198aa850"
+  },
+  {
+    "timestamp": "2023-11-15T11:25:03Z",
+    "sensor_id": "CAM-004",
+    "sensor_type": "Camera",
+    "location": {
+      "latitude": 40.7136,
+      "longitude": -74.0052
+    },
+    "data": "urban_pedestrian_safety_monitoring",
+    "id": "d7c5dd37-68b5-4a16-836f-f1d2a36b69a4"
+  },
+  {
+    "timestamp": "2023-11-15T10:55:17Z",
+    "sensor_id": "LIDAR-026",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.717,
+      "longitude": -74.0095
+    },
+    "data": "archaeological_site_terrain_scanning",
+    "id": "b9c0d995-97f3-4495-a69a-fa748de2884c"
+  },
+  {
+    "timestamp": "2023-11-15T09:28:33Z",
+    "sensor_id": "CAM-009",
+    "sensor_type": "Camera",
+    "location": {
+      "latitude": 40.7145,
+      "longitude": -74.006
+    },
+    "data": "street_intersection_monitoring",
+    "id": "2a97e3ed-c7ed-4c94-848b-0c09dbc5ed39"
+  },
+  {
+    "timestamp": "2023-11-15T11:50:56Z",
+    "sensor_id": "ULTRA-009",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7153,
+      "longitude": -74.0076
+    },
+    "data": "submarine_obstacle_detection",
+    "id": "c9f7528c-ae51-47f6-b9b6-5dfbde1c206e"
+  },
+  {
+    "timestamp": "2023-11-15T10:18:55Z",
+    "sensor_id": "CAM-014",
+    "sensor_type": "Camera",
+    "location": {
+      "latitude": 40.714,
+      "longitude": -74.005
+    },
+    "data": "smart_city_traffic_analysis",
+    "id": "8dadd74b-fda9-4532-a611-847b6d94b45f"
+  },
+  {
+    "timestamp": "2023-11-15T09:29:05Z",
+    "sensor_id": "ULTRA-010",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7132,
+      "longitude": -74.0045
+    },
+    "data": "robotic_arm_proximity_sensing",
+    "id": "66f80e21-f4d1-4755-b78f-9a55ef3510fc"
+  },
+  {
+    "timestamp": "2023-11-15T09:45:29Z",
+    "sensor_id": "LIDAR-005",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.7118,
+      "longitude": -74.007
+    },
+    "data": "coastal_erosion_mapping",
+    "id": "1f9ced19-b5b0-49c5-9692-97cea90561ab"
+  },
+  {
+    "timestamp": "2023-11-15T09:25:44Z",
+    "sensor_id": "ULTRA-004",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7142,
+      "longitude": -74.0065
+    },
+    "data": "parking_obstacle_detection",
+    "id": "2b9ebce0-00e2-4de5-9095-035b12104498"
+  },
+  {
+    "timestamp": "2023-11-15T10:20:17Z",
+    "sensor_id": "GPS-016",
+    "sensor_type": "GPS",
+    "location": {
+      "latitude": 40.7165,
+      "longitude": -74.0095
+    },
+    "data": "precision_agricultural_mapping",
+    "id": "98e56bd5-5f28-49f4-952c-f464454b6303"
+  },
+  {
+    "timestamp": "2023-11-15T12:45:22Z",
+    "sensor_id": "LIDAR-033",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.7133,
+      "longitude": -74.0065
+    },
+    "data": "urban_infrastructure_density_scan"
+  },
+  {
+    "timestamp": "2023-11-15T13:10:37Z",
+    "sensor_id": "RADAR-005",
+    "sensor_type": "Radar",
+    "location": {
+      "latitude": 40.7155,
+      "longitude": -74.008
+    },
+    "data": "maritime_traffic_pattern_analysis"
+  },
+  {
+    "timestamp": "2023-11-15T13:25:49Z",
+    "sensor_id": "CAM-027",
+    "sensor_type": "Camera",
+    "location": {
+      "latitude": 40.714,
+      "longitude": -74.0055
+    },
+    "data": "pedestrian_movement_tracking"
+  },
+  {
+    "timestamp": "2023-11-15T13:40:15Z",
+    "sensor_id": "ULTRA-025",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7162,
+      "longitude": -74.009
+    },
+    "data": "autonomous_vehicle_obstacle_detection"
+  },
+  {
+    "timestamp": "2023-11-15T14:05:33Z",
+    "sensor_id": "GPS-042",
+    "sensor_type": "GPS",
+    "location": {
+      "latitude": 40.718,
+      "longitude": -74.011
+    },
+    "data": "urban_logistics_route_optimization"
+  },
+  {
+    "timestamp": "2023-11-15T14:20:56Z",
+    "sensor_id": "IMU-029",
+    "sensor_type": "IMU",
+    "location": {
+      "latitude": 40.7145,
+      "longitude": -74.004
+    },
+    "data": "structural_vibration_monitoring"
+  },
+  {
+    "timestamp": "2023-11-15T14:35:41Z",
+    "sensor_id": "LIDAR-046",
+    "sensor_type": "LiDAR",
+    "location": {
+      "latitude": 40.717,
+      "longitude": -74.0095
+    },
+    "data": "urban_green_corridor_mapping"
+  },
+  {
+    "timestamp": "2023-11-15T14:50:22Z",
+    "sensor_id": "RADAR-012",
+    "sensor_type": "Radar",
+    "location": {
+      "latitude": 40.7158,
+      "longitude": -74.0085
+    },
+    "data": "atmospheric_precipitation_tracking"
+  },
+  {
+    "timestamp": "2023-11-15T15:05:37Z",
+    "sensor_id": "CAM-035",
+    "sensor_type": "Camera",
+    "location": {
+      "latitude": 40.7138,
+      "longitude": -74.006
+    },
+    "data": "urban_wildlife_interaction_study"
+  },
+  {
+    "timestamp": "2023-11-15T15:20:44Z",
+    "sensor_id": "ULTRA-037",
+    "sensor_type": "Ultrasonic",
+    "location": {
+      "latitude": 40.7165,
+      "longitude": -74.0075
+    },
+    "data": "marine_ecosystem_depth_scanning"
+  }
+]

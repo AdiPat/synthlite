@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Employee",
+  "type": "object",
+  "properties": {
+    "employee_id": {
+      "type": "string",
+      "description": "Unique identifier for the employee, typically a UUID."
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the employee."
+    },
+    "job_title": {
+      "type": "string",
+      "description": "Employee's job title within the company."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Employee's work email address."
+    },
+    "hire_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the employee was hired, in YYYY-MM-DD format."
+    }
+  },
+  "required": ["employee_id", "name", "job_title", "email", "hire_date"]
+}

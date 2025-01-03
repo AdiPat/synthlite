@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TimeDeityConversation",
+  "type": "object",
+  "properties": {
+    "conversation_id": {
+      "type": "string",
+      "description": "Unique identifier for the conversation."
+    },
+    "participants": {
+      "type": "array",
+      "description": "List of participants in the conversation.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "participant_id": {
+            "type": "string",
+            "description": "Unique identifier for the participant."
+          },
+          "role": {
+            "type": "string",
+            "enum": ["human", "deity_of_time"],
+            "description": "Role of the participant in the conversation."
+          }
+        },
+        "required": ["participant_id", "role"]
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "messages": {
+      "type": "array",
+      "description": "List of messages exchanged in the conversation.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "description": "Unique identifier for the message."
+          },
+          "sender_id": {
+            "type": "string",
+            "description": "Identifier of the participant who sent the message."
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 formatted timestamp of when the message was sent."
+          },
+          "content": {
+            "type": "string",
+            "description": "Text content of the message."
+          }
+        },
+        "required": ["message_id", "sender_id", "timestamp", "content"]
+      },
+      "minItems": 5,
+      "maxItems": 5
+    }
+  },
+  "required": ["conversation_id", "participants", "messages"]
+}

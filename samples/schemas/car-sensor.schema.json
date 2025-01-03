@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutonomousCarSensorData",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 formatted timestamp indicating when the sensor data was recorded."
+    },
+    "sensor_id": {
+      "type": "string",
+      "description": "Unique identifier for the sensor that captured the data."
+    },
+    "sensor_type": {
+      "type": "string",
+      "enum": ["LiDAR", "Radar", "Camera", "Ultrasonic", "GPS", "IMU"],
+      "description": "Type of sensor that generated the data."
+    },
+    "location": {
+      "type": "object",
+      "description": "Geographical coordinates where the data was captured.",
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90,
+          "description": "Latitude in decimal degrees."
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180,
+          "description": "Longitude in decimal degrees."
+        }
+      },
+      "required": ["latitude", "longitude"]
+    },
+    "data": {
+      "type": "string",
+      "description": "Encoded sensor data payload, format varies by sensor type."
+    }
+  },
+  "required": ["timestamp", "sensor_id", "sensor_type", "location", "data"]
+}

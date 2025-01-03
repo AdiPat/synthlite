@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UserProfile",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Unique identifier for the user, typically a UUID."
+    },
+    "username": {
+      "type": "string",
+      "description": "User's chosen display name."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "User's email address."
+    },
+    "password": {
+      "type": "string",
+      "description": "Hashed password for user authentication."
+    },
+    "date_of_birth": {
+      "type": "string",
+      "format": "date",
+      "description": "User's date of birth in YYYY-MM-DD format."
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["Male", "Female", "Other", "Prefer not to say"],
+      "description": "User's gender."
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short biography or description provided by the user."
+    },
+    "profile_picture_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the user's profile picture."
+    },
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "description": "User's personal or professional website URL."
+    },
+    "location": {
+      "type": "string",
+      "description": "User's location, such as city or country."
+    },
+    "join_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of when the user joined the platform."
+    },
+    "followers_count": {
+      "type": "integer",
+      "description": "Number of followers the user has."
+    },
+    "following_count": {
+      "type": "integer",
+      "description": "Number of users this user is following."
+    },
+    "posts_count": {
+      "type": "integer",
+      "description": "Total number of posts made by the user."
+    },
+    "is_verified": {
+      "type": "boolean",
+      "description": "Indicates whether the user's profile is verified."
+    }
+  },
+  "required": ["user_id", "username", "email", "password", "join_date"]
+}

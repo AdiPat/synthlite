@@ -1,0 +1,142 @@
+[
+  {
+    "employee_id": "f3a4b8e1-7c2d-4f9e-a1b6-5d9c2e3f4g5h",
+    "name": "Aria Nakamura",
+    "job_title": "Senior Cloud Architect",
+    "email": "aria.nakamura@innovatech.com",
+    "hire_date": "2019-03-15"
+  },
+  {
+    "employee_id": "b7c5d2e9-1f3a-4h6g-b8k2-3j5l6m7n8o9p",
+    "name": "Marcus Rodriguez",
+    "job_title": "Data Science Manager",
+    "email": "marcus.rodriguez@innovatech.com",
+    "hire_date": "2020-07-22"
+  },
+  {
+    "employee_id": "k2l5m8n1-9o3p-6q4r-c7d3-2e6f9g1h4i7j",
+    "name": "Elena Petrova",
+    "job_title": "Cybersecurity Specialist",
+    "email": "elena.petrova@innovatech.com",
+    "hire_date": "2018-11-05"
+  },
+  {
+    "employee_id": "w3x6y9z2-1a4b-7c5d-e8f1-6g9h2i5j3k7l",
+    "name": "Jamal Thompson",
+    "job_title": "UX Design Lead",
+    "email": "jamal.thompson@innovatech.com",
+    "hire_date": "2021-02-14"
+  },
+  {
+    "employee_id": "r6s9t2u5-3v7w-2x8y-b4c7-9d1e5f8g2h6i",
+    "name": "Sofia Chen",
+    "job_title": "Product Marketing Director",
+    "email": "sofia.chen@innovatech.com",
+    "hire_date": "2017-09-30"
+  },
+  {
+    "employee_id": "h1j4k7l2-5m9n-3o6p-a2d5-7e3f6g9h1i4j",
+    "name": "Liam O'Connor",
+    "job_title": "DevOps Engineer",
+    "email": "liam.oconnor@innovatech.com",
+    "hire_date": "2022-01-11"
+  },
+  {
+    "employee_id": "p3q6r9s2-7t1u-5v8w-c6f9-2g5h8i1j4k7l",
+    "name": "Isabella Martinez",
+    "job_title": "AI Research Scientist",
+    "email": "isabella.martinez@innovatech.com",
+    "hire_date": "2020-05-17"
+  },
+  {
+    "employee_id": "d7e1f4g9-2h5i-8j3k-b1m4-6n9o2p5q8r3s",
+    "name": "Kai Yamamoto",
+    "job_title": "Full Stack Developer",
+    "email": "kai.yamamoto@innovatech.com",
+    "hire_date": "2021-08-03"
+  },
+  {
+    "employee_id": "t5u8v1w4-9x2y-6z3a-d7e2-3f6g9h1i4j7k",
+    "name": "Olivia Patel",
+    "job_title": "Business Intelligence Analyst",
+    "email": "olivia.patel@innovatech.com",
+    "hire_date": "2019-12-06"
+  },
+  {
+    "employee_id": "m2n5o8p1-4q7r-1s9t-e3f6-8g2h5i9j3k6l",
+    "name": "Zara Williams",
+    "job_title": "Customer Success Manager",
+    "email": "zara.williams@innovatech.com",
+    "hire_date": "2022-06-25"
+  },
+  {
+    "employee_id": "f3a4b8e1-7c2d-4f9e-a1b6-5d9c2e3f4g5i",
+    "name": "Aria Tanaka",
+    "job_title": "Senior Cloud Architect",
+    "email": "aria.tanaka@innovatech.com",
+    "hire_date": "2019-03-16"
+  },
+  {
+    "employee_id": "c8d6e3f0-2g4h-5i7j-c9l3-4k6m7n8o9p1q",
+    "name": "Marcus Rodriguez",
+    "job_title": "Senior Data Science Strategist",
+    "email": "m.rodriguez.ds@innovatech.com",
+    "hire_date": "2020-07-22"
+  },
+  {
+    "employee_id": "k2l5m8n1-9o3p-6q4r-c7d3-2e6f9g1h4i7j",
+    "name": "Anastasia Volkova",
+    "job_title": "Information Security Analyst",
+    "email": "anastasia.volkova@innovatech.com",
+    "hire_date": "2018-11-05"
+  },
+  {
+    "employee_id": "w3x6y9z2-1a4b-7c5d-e8f1-6g9h2i5j3k8m",
+    "name": "Jamal Rodriguez Thompson",
+    "job_title": "Senior UX Design Specialist",
+    "email": "jamal.rodriguez.thompson@innovatech.com",
+    "hire_date": "2021-02-14"
+  },
+  {
+    "employee_id": "r6s9t2u5-3v7w-2x8y-b4c7-9d1e5f8g2h7j",
+    "name": "Sophia Chen-Wong",
+    "job_title": "Senior Product Marketing Manager",
+    "email": "sophia.chen-wong@innovatech.com",
+    "hire_date": "2017-09-30"
+  },
+  {
+    "employee_id": "x2y5z8w1-6a9b-4c7d-b3e6-8f1g4h7i2j5k",
+    "name": "Liam Murphy O'Connor",
+    "job_title": "DevOps Engineer",
+    "email": "liam.murphy.oconnor@innovatech.com",
+    "hire_date": "2022-01-11"
+  },
+  {
+    "employee_id": "p3q6r9s2-7t1u-5v8w-c6f9-2g5h8i1j4k8m",
+    "name": "Isabella Martinez",
+    "job_title": "AI Research Scientist",
+    "email": "isabella.martinez2@innovatech.com",
+    "hire_date": "2020-05-18"
+  },
+  {
+    "employee_id": "d7e1f4g9-2h5i-8j3k-b1m4-6n9o2p5q8r3s",
+    "name": "Kai Yamamoto",
+    "job_title": "Senior Backend Developer",
+    "email": "k.yamamoto@innovatech.org",
+    "hire_date": "2022-03-15"
+  },
+  {
+    "employee_id": "t5u8v1w4-9x2y-6z3a-d7e2-3f6g9h1i4j7k",
+    "name": "Olivia Patel",
+    "job_title": "Senior Business Intelligence Strategist",
+    "email": "o.patel@innovatech.solutions",
+    "hire_date": "2020-03-15"
+  },
+  {
+    "employee_id": "m2n5o8p1-4q7r-1s9t-e3f6-8g2h5i9j3k7m",
+    "name": "Zara Williams",
+    "job_title": "Customer Success Manager",
+    "email": "zara.williams2@innovatech.com",
+    "hire_date": "2022-07-15"
+  }
+]

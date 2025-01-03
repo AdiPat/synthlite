@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HumanBehavioralData",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 formatted timestamp indicating when the data was recorded."
+    },
+    "thought": {
+      "type": "string",
+      "description": "A brief description or categorization of the individual's thought process at the time of recording."
+    },
+    "intention": {
+      "type": "string",
+      "description": "The intended action or goal of the individual corresponding to the recorded thought."
+    },
+    "signalHertz": {
+      "type": "number",
+      "description": "Frequency of the physiological signal measured in Hertz (Hz)."
+    },
+    "action": {
+      "type": "string",
+      "description": "The physical action performed by the individual at the time of recording."
+    },
+    "spoken_words": {
+      "type": "string",
+      "description": "Verbatim transcript of words spoken by the individual."
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the individual being analyzed."
+    }
+  },
+  "required": [
+    "timestamp",
+    "thought",
+    "intention",
+    "signalHertz",
+    "action",
+    "spoken_words",
+    "name"
+  ]
+}
