@@ -1,5 +1,10 @@
 # SynthLite 🌞
 
+<p align="center" width="100%">
+    <img width="100%" src="https://raw.githubusercontent.com/AdiPat/synthlite/refs/heads/main/assets/synthlite_logo.png
+    ">
+</p>
+
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.x-blue)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-16.x-green)](https://nodejs.org/)
