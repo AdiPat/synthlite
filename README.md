@@ -1,15 +1,17 @@
 # SynthLite 🌞
 
+> 🚨 **Disclaimer:** SynthLite is a work in progress. Expect bugs, fun, and room for improvement.
+
+SynthLite is more than just a tool—it’s a spark in our larger SynthArt vision: to democratize synthetic data generation for everyone. By combining cutting-edge AI with deep research, SynthLite empowers you to create reliable, high-quality synthetic datasets in a minutes. We believe the future of data solutions should be private, open source, scalable, and accessible and safe — and SynthLite is here to make that future a reality. 🔮
+
 <p align="center" width="100%">
-    <img width="100%" src="https://raw.githubusercontent.com/AdiPat/synthlite/refs/heads/main/assets/synthlite_logo.png">
+    <img height="300px" src="https://raw.githubusercontent.com/AdiPat/synthlite/refs/heads/main/assets/synthlite_logo.png">
 </p>
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.x-blue)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-16.x-green)](https://nodejs.org/)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)](#contributors)
-
-> 🚨 **Disclaimer:** SynthLite is a work in progress. Expect bugs, fun, and room for improvement.
 
 ## Introduction 💡
 
