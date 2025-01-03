@@ -1,0 +1,51 @@
+{
+  "name": "synthlite",
+  "version": "1.0.0",
+  "description": "A fast, lightweight Groq-powered synthetic data generator written in TypeScript. 🌞",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "bin": {
+    "synthlite": "./dist/bin.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/bin.js",
+    "test": "vitest --testTimeout 30000",
+    "test:silent": "vitest --silent --testTimeout 30000",
+    "test:coverage": "vitest --coverage --testTimeout 30000",
+    "test:coverage:silent": "vitest --coverage --silent --testTimeout 30000",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "groq",
+    "llama",
+    "synthetic-data",
+    "synthetic-data-generator",
+    "synthetic-data-generation",
+    "synthart",
+    "genai",
+    "large-language-models",
+    "llm",
+    "ai",
+    "artificial-intelligence"
+  ],
+  "author": "Aditya Patange (AdiPat) <contact.adityapatange@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ai": "^4.0.22",
+    "axios": "^1.7.9",
+    "chalk": "^4.0.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "zod": "^3.24.1"
+  }
+}
