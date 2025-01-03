@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CrypticMessage",
+  "description": "Schema for a cryptic message entry",
+  "type": "object",
+  "properties": {
+    "author": {
+      "type": "string",
+      "description": "The creator or source of the cryptic message"
+    },
+    "message": {
+      "type": "string",
+      "description": "The cryptic message itself"
+    },
+    "meaning": {
+      "type": "string",
+      "description": "An explanation or interpretation of the cryptic message"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Keywords or categories associated with the cryptic message",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["author", "message", "meaning", "tags"],
+  "additionalProperties": false
+}

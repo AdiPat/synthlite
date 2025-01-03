@@ -110,6 +110,15 @@ export class Printer {
   }
 
   /**
+   * Prints a success message to the console.
+   * @param message The message to print.
+   * @returns
+   */
+  public success(message: string) {
+    return this.px("[✔]", message, "greenBright", false);
+  }
+
+  /**
    * Checks if the message is empty.
    * @param message The message to print.
    * @returns true if the message is empty, false otherwise.
@@ -122,4 +131,24 @@ export class Printer {
       message.trim() === ""
     );
   }
+
+  /**
+   * Prints the SynthLite banner to the console.
+   * @returns void
+   */
+  public printBanner(): void {
+    const messages = [
+      "SynthLite: A fast, lightweight and flexible synthetic data generation tool. 🚀",
+      "Author: Aditya Patange (AdiPat) <contact.adityapatange@gmail.com>",
+      "GitHub: https://www.github.com/AdiPat/synthlite",
+      "synthlite is a product of AdiPat Labs! 🌞",
+      "\n",
+    ];
+
+    messages.forEach((message) => {
+      this.info(message);
+    });
+  }
 }
+
+export const printer = new Printer();

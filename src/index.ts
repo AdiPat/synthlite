@@ -1,8 +1,9 @@
-import dotenv from "dotenv";
-import { synthlite } from "./synthlite";
+import { SynthLiteCLI } from "./synthlite";
 
-dotenv.config();
-
+/**
+ * Main function to run the SynthLite CLI.
+ */
 export async function main() {
-  await synthlite();
+  const cli = new SynthLiteCLI();
+  await cli.run();
 }
