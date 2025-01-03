@@ -20,9 +20,10 @@ import chalk from "chalk";
 export class Printer {
   private verbose: boolean = false;
   private colourPrinter: {
-    pink: chalk.Chalk;
+    [colour: string]: chalk.Chalk;
   } = {
     pink: chalk.hex("#FF1493") as chalk.Chalk,
+    orange: chalk.hex("#FFA500") as chalk.Chalk,
   };
 
   /**
@@ -146,7 +147,7 @@ export class Printer {
     ];
 
     messages.forEach((message) => {
-      this.info(message);
+      this.px("⚡️", message, "orange", false);
     });
   }
 }
